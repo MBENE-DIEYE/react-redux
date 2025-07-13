@@ -4,6 +4,7 @@ import Home from "./pages/dashboard/Home"
 import PublicLayout from "./Layouts/PublicLayout"
 import { useSelector } from "react-redux"
 import PrivateLayout from "./Layouts/PrivateLayout"
+// import Navbar from "./components/dashboard/navbar"
 
 const ProtectedRoute = ({ children }) => {
   const { token } = useSelector((state) => state.auth)
@@ -17,6 +18,8 @@ const ProtectedRoute = ({ children }) => {
 
 const App = () => {
   return (
+  <>
+      {/* <Navbar/> */}
     <Routes>
       <Route path="/" element={<PublicLayout />}>
         <Route path="" element={<Login />} />
@@ -29,6 +32,7 @@ const App = () => {
       </Route>
 
     </Routes>
+  </>
   )
 }
 
