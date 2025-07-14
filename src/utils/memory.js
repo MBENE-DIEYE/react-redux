@@ -1,14 +1,14 @@
 export const memory = {
-    get: (key) =>{
+    get: (key) => {
         return JSON.parse(localStorage.getItem(key));
     },
-    set: (key, value) =>{
+    set: (key, value) => {
         return localStorage.setItem(key, JSON.stringify(value))
     },
-    remove: (key) =>{
+    remove: (key) => {
         return localStorage.removeItem(key)
     },
-    clear: (key) =>{
+    clear: (key) => {
         return localStorage.clear()
     }
 }

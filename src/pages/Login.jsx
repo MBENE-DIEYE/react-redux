@@ -11,24 +11,22 @@ const Login = () => {
         password: "1234"
     })
     const handleInput = ({ target: { name, value } }) => {
-        setForm((f) =>({
+        setForm((f) => ({
             ...f,
             [name]: value,
         }))
     }
     const handleLogin = (e) => {
         e.preventDefault()
-
-        const result ={
-            user:{
-                id:"dedweuidweyfvyc",
+        const result = {
+            user: {
+                id: "dedweuidweyfvyc",
                 first_name: "Paolo",
                 last_name: "Rossi",
                 email: "me@exemple.com"
             },
             token: "dwercfervgtrvr.tbvtverfcrewcf.recfevfgvg"
         }
-
         dispatch(login(result))
         navigate("/dashboard")
     }
